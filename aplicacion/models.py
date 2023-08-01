@@ -9,15 +9,23 @@ class Fiscal(models.Model):
     telefono=models.IntegerField()
     distrito=models.CharField(max_length=50)
 
+    def __str__(self):
+        return f"{self.nombre}, {self.apellido}"
+
 class Establecimiento(models.Model):
     nombre=models.CharField(max_length=50)
     direccion=models.CharField(max_length=50)
     localidad=models.CharField(max_length=50)
     mesas=models.PositiveIntegerField()
 
+    def __str__(self):
+        return f"{self.nombre}"
+
 class Distrito(models.Model):
     nombre=models.CharField(max_length=50)
     seccion=models.PositiveSmallIntegerField()
     establecimientos=models.PositiveIntegerField()
 
+    def __str__(self):
+        return f"{self.nombre}"
 

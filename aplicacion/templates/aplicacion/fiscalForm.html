@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo fiscal</title>
+</head>
+<body>
+    <h2>Ingrese un nuevo fiscal</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Nombre:<input type="text" name="nombre" id="nombre"></p>
+        <p>Apellido:<input type="text" name="apellido" id="apellido"></p>
+        <p>DNI:<input type="number" name="dni" id="dni"></p>
+        <p>Telefono:<input type="number" name="telefono" id="telefono"></p>
+        <p>Distrito:<input type="text" name="distrito" id="distrito"></p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
